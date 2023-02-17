@@ -29,6 +29,6 @@ jobs:
         run: |
           ./gradlew assembleRelease -x lint -x lintVitalRelease
       - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@v2022.3.0
+        uses: JetBrains/qodana-action@v2022.3.4
         with:
           sarif_file: ${{ runner.temp }}/qodana/results/qodana.sarif.json
