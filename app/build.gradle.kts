@@ -65,7 +65,7 @@ android {
                 maybeCreate<ManagedVirtualDevice>("pixel5api30").apply {
                     device = "Pixel 5"
                     apiLevel = 30
-                    systemImageSource = "aosp"
+                    systemImageSource = "aosp-atd"
                     require64Bit = false
                 }
             }
