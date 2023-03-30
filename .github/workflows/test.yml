@@ -21,12 +21,8 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: build
         run: |
-          # yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
-          find /Users/runner/Library/Android/sdk/ | grep sdkmanager
           yes | /Users/runner/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
-          ./gradlew :app:pixel5api30Setup --info
           ./gradlew pixel5api30DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
-          # ./gradlew assembleDebug
   test-ubuntu:
     runs-on: ubuntu-latest
     steps:
@@ -40,5 +36,4 @@ jobs:
       - name: build
         run: |
           yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
-          ./gradlew :app:pixel5api30Setup --info
           ./gradlew pixel5api30DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
