@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.ManagedVirtualDevice
+
 plugins {
     id "com.android.application"
     id "org.jetbrains.kotlin.android"
@@ -42,6 +44,25 @@ android {
     packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+    testOptions {
+        unitTests.all {
+            it.useJUnitPlatform()
+            it.testLogging.events(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
+        }
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+        managedDevices {
+            devices {
+                maybeCreate<ManagedVirtualDevice>("pixel5api30").apply {
+                    device = "pixel_5"
+                    apiLevel = 30
+                    systemImageSource = "aosp"
+                    require64Bit = false
+                }
+            }
         }
     }
 }

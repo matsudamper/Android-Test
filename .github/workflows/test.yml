@@ -1,5 +1,9 @@
 name: test
-on: pull_request
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
 
 permissions:
   pull-requests: write
@@ -17,4 +21,5 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: build
         run: |
-          ./gradlew assembleDebug
+          ./gradlew pixel5api30DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
+#          ./gradlew assembleDebug
