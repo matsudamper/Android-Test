@@ -23,17 +23,17 @@ jobs:
         run: |
           yes | /Users/runner/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
           ./gradlew pixel5api30DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
-  test-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v2
-        with:
-          distribution: 'temurin'
-          java-version: '11'
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-      - name: build
-        run: |
-          yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
-          ./gradlew pixel5api30DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
+  # test-ubuntu:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-java@v2
+  #       with:
+  #         distribution: 'temurin'
+  #         java-version: '11'
+  #     - name: Setup Gradle
+  #       uses: gradle/gradle-build-action@v2
+  #     - name: build
+  #       run: |
+  #         yes | /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+  #         ./gradlew pixel5api30DebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
