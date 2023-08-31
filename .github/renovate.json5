@@ -2,14 +2,16 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 10,
-  "fileMatch": [
-    "\\.gradle(\\.kts)?$",
-    "(^|/)gradle\\.properties$",
-    "(^|/)gradle/.+\\.toml$",
-    "(^|/)buildSrc/.+\\.kt$",
-    "(^|/)VersionCatalog\\.kt$",
-    "\\.versions\\.toml$",
-    "(^|/)versions.props$",
-    "(^|/)versions.lock$"
-  ],
+  "gradle": {
+    "fileMatch": [
+      "\\.gradle(\\.kts)?$",
+      "(^|/)gradle\\.properties$",
+      "(^|/)gradle/.+\\.toml$",
+      "(^|/)buildSrc/.+\\.kt$",
+      "(^|/)VersionCatalog\\.kt$",
+      "\\.versions\\.toml$",
+      "(^|/)versions.props$",
+      "(^|/)versions.lock$"
+    ],
+  }
 }
