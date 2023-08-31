@@ -1,0 +1,6 @@
+
+object VersionCatalog {
+    object Android {
+        val androidKtx = "androidx.core:core-ktx:1.8.0"
+    }
+}
