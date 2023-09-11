@@ -21,7 +21,7 @@ java {
 }
 
 dependencies {
-    implementation("com.android.application:com.android.application.gradle.plugin:8.1.0")
+    implementation("com.android.application:com.android.application.gradle.plugin:8.1.1")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${libs.versions.kotlin.get()}")
 }
 
