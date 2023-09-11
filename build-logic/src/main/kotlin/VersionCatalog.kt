@@ -5,7 +5,7 @@ object VersionCatalog {
         val androidKtx = "androidx.core:core-ktx:1.8.0"
 
         object Compose {
-            private val composeUiVersion = "1.3.3"
+            private val composeUiVersion = "1.5.1"
             val ui = "androidx.compose.ui:ui:$composeUiVersion"
             val uiGraphics = "androidx.compose.ui:ui-graphics:$composeUiVersion"
             val uiTooling = "androidx.compose.ui:ui-tooling:1.3.3"
