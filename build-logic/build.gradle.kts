@@ -22,7 +22,7 @@ java {
 
 dependencies {
     implementation("com.android.application:com.android.application.gradle.plugin:8.1.0")
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10")
 }
 
 gradlePlugin {
