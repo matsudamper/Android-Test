@@ -1,6 +1,12 @@
+import org.gradle.api.Project
 
+class VersionCatalog(project: Project) {
+    val catalog = project.libs
+    val Kotlin = object {
+        val version = catalog.version("kotlin")
+        val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:$version"
+    }
 
-object VersionCatalog {
     object Android {
         val androidKtx = "androidx.core:core-ktx:1.8.0"
 

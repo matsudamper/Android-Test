@@ -14,6 +14,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("libs") {
+            from(files("./build-logic/libs.versions.toml"))
             version("compose_compiler", "1.5.2")
 
             library("android-core-ktx", "androidx.core:core-ktx:1.10.1")
