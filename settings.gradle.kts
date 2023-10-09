@@ -18,7 +18,7 @@ dependencyResolutionManagement {
             version("compose_compiler", "1.5.2")
 
             library("android-core-ktx", "androidx.core:core-ktx:1.10.1")
-            library("android-activity-ktx", "androidx.activity:activity-ktx:1.7.2")
+            library("android-activity-ktx", "androidx.activity:activity-ktx:1.8.0")
             library("android-activity-compose", "androidx.activity:activity-compose:1.7.2")
 
             val composeUiVersion = "1.5.0"
