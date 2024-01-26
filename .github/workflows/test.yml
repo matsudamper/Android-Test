@@ -18,7 +18,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v3
       - name: build
         run: |
           yes | /Users/runner/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
