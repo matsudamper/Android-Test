@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -12,8 +13,9 @@ repositories {
     gradlePluginPortal()
 }
 
-val compileKotlin: KotlinCompile by tasks
-compileKotlin.kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+tasks.named<KotlinCompile>("compileKotlin") {
+    compilerOptions.jvmTarget.set(JvmTarget.JVM_17)
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
